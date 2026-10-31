@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jfif" sizes="32x32" href="images/icon-image02.png">
     <title>AURELLE — Modern Dining</title>
     <link rel="stylesheet" href="https://cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -24,7 +25,7 @@
         </nav>
 
         <a href="#reservations" class="book-now-btn">
-            Book Now <span>→</span>
+            Book Now 
         </a>
 
 
@@ -62,7 +63,7 @@
                     </p>
 
                     <a href="#signature" class="primary-button">
-                        Our Delicious Menu <span>⟶</span>
+                        Our Delicious Menu
                     </a>
                 </div>
 
@@ -151,7 +152,7 @@
             </div>
 
             <a href="#reservations" class="food-book-button">
-                Discover Our Menu <span>→</span>
+                Discover Our Menu
             </a>
         </section>
 
@@ -214,7 +215,7 @@
                 </div>
 
                 <a href="#home" class="story-button">
-                    Discover Our Story <span>→</span>
+                    Discover Our Story
                 </a>
 
             </div>
@@ -236,18 +237,22 @@
                 </p>
 
                 <form 
-                class="reservation-form" 
-                id="reservationForm"
-                action="https://formspree.io/f/mdeelbro" 
-                method="POST">
+                    class="reservation-form" 
+                    id="reservationForm" 
+                    action="https://formspree.io/f/mdeelbro"
+                    method="POST">
 
-                    <input type="text" placeholder="Your Name" aria-label="Your Name"  name="name" required>
+                    <input type="text" placeholder="Your Name" aria-label="Your Name" name="name" required>
 
-                    <input type="tel" placeholder="Phone Number" aria-label="Phone Number"  name="phone" required>
+                    <input type="tel" placeholder="Phone Number" aria-label="Phone Number" name="phone" required>
 
                     <input type="email" placeholder="name@gmail.com" aria-label="Phone Number" name="email" required>
 
-                    <input type="date" aria-label="Reservation Date" name="date" required>
+                    <div class="date-input-wrapper">
+                        <input type="date" id="reservationDate" name="date" required>
+
+                        <span class="date-placeholder">Reservation Date</span>
+                    </div>
 
                     <select aria-label="Number of Guests" name="guests" required>
                         <option value="" disabled selected>Number of Guests</option>
@@ -260,7 +265,7 @@
                     </select>
 
                     <button type="submit" id="reservationSubmit">
-                        Request A Table <span>→</span>
+                        Request A Table 
                     </button>
 
                 </form>

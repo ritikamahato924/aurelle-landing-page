@@ -94,7 +94,8 @@ img {
 }
 
 .book-now-btn span {
-    font-size: 17px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 /* MOBILE MENU BUTTON */
@@ -226,7 +227,8 @@ img {
 }
 
 .primary-button span {
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .primary-button:hover {
@@ -507,7 +509,7 @@ img {
     .primary-button {
         gap: 12px;
         padding: 12px;
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .hero-decoration {
@@ -691,7 +693,8 @@ img {
 }
 
 .food-book-button span {
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .food-book-button:hover {
@@ -880,7 +883,8 @@ img {
 
 
 .story-button span {
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .story-button:hover {
@@ -1080,7 +1084,8 @@ img {
 
 .reservation-form button span {
     margin-left: 10px;
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 
@@ -1251,5 +1256,89 @@ img {
         margin-left: auto;
         margin-right: 24px;
         white-space: nowrap;
+    }
+}
+
+.date-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.date-input-wrapper input {
+    width: 100%;
+    height: 72px;
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+
+    color: transparent;
+    color-scheme: dark;
+    cursor: pointer;
+}
+
+/* Custom placeholder */
+.date-placeholder {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: #ddd;
+    font-size: 11px;
+    font-family: 'Poppins', sans-serif;
+
+    pointer-events: none;
+}
+
+/* Show native date text when focused */
+.date-input-wrapper input:focus,
+.date-input-wrapper input.has-value {
+    color: white;
+}
+
+/* Hide custom placeholder */
+.date-input-wrapper input:focus + .date-placeholder,
+.date-input-wrapper input.has-value + .date-placeholder {
+    display: none;
+}
+
+#reservationDate{
+    height: 43px;
+}
+
+#successMessage {
+    display: none;
+    width: 90%;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px 20px;
+    box-sizing: border-box;
+
+    background: #fff;
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+#successMessage h3 {
+    color: #003366;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#successMessage p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+    .view-button{
+        border: 3px solid var(--bg);
     }
 }

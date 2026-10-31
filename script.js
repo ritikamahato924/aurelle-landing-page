@@ -47,3 +47,24 @@ reservationForm.addEventListener("submit", async function(e) {
         alert("Unable to submit your request. Please check your internet connection.");
     }
 });
+
+const dateInput = document.querySelector("#reservationDate");
+
+const today = new Date();
+const localDate = [
+    today.getFullYear(),
+    String(today.getMonth() + 1).padStart(2, "0"),
+    String(today.getDate()).padStart(2, "0")
+].join("-");
+
+dateInput.min = localDate;
+
+const reservationDate = document.querySelector("#reservationDate");
+
+reservationDate.addEventListener("change", function () {
+    this.classList.toggle("has-value", this.value !== "");
+});
+
+reservationDate.addEventListener("blur", function () {
+    this.classList.toggle("has-value", this.value !== "");
+});
